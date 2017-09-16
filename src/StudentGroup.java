@@ -288,6 +288,9 @@ public class StudentGroup implements StudentArrayOperation {
 		}
 		return null;
 	}
+	public static int daysBetween(Date d1, Date d2){
+             return (int)( (d2.getTime() - d1.getTime()) / (1000 * 60 * 60 * 24));
+     }
 
 	@Override
 	public int getCurrentAgeByDate(int indexOfStudent) {
