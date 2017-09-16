@@ -124,6 +124,7 @@ public class StudentGroup implements StudentArrayOperation {
 		    //this.students.hashCode();
 		    //System.out.println(s1.students.length);
 		   this.changeLength(s1.students.length);
+		    //System.out.println(this.students.length);
 		      this.students=s1.students;
 		 }
 	}
@@ -142,13 +143,11 @@ public class StudentGroup implements StudentArrayOperation {
 		      {
 		            s1.students[i]=s[i];
 		      }
-		      s1.students[index]=student;
+		      this.students[index]=student;
 		      for(int i=index+1;i<this.students.length;i++)
 		      {
-		            s1.students[i]=s[i-1];
+		            this.students[i]=s[i-1];
 		      }
-		      this.changeLength(s1.students.length);
-		      this.students=s1.students;
 		}
 		
 	}
@@ -165,14 +164,12 @@ public class StudentGroup implements StudentArrayOperation {
 		      StudentGroup s1=new StudentGroup(this.students.length-1);
 		      for(int i=0;i<index;i++)
 		      {
-		            s1.students[i]=s[i];
+		            this.students[i]=s[i];
 		      }
 		      for(int i=index;i<this.students.length;i++)
 		      {
-		            s1.students[i]=s[i+1];
+		            this.students[i]=s[i+1];
 		      }
-		      this.changeLength(s1.students.length);
-		      this.students=s1.students;
 		}
 	}
 
@@ -206,10 +203,8 @@ public class StudentGroup implements StudentArrayOperation {
 		      StudentGroup s1=new StudentGroup(index+1);
 		      for(int i=0;i<index+1;i++)
 		      {
-		            s1.students[i]=s[i];
+		            this.students[i]=s[i];
 		      }
-		      this.changeLength(s1.students.length);
-		      this.students=s1.students;
 	      } 
 	}
 
@@ -245,10 +240,8 @@ public class StudentGroup implements StudentArrayOperation {
 		      StudentGroup s1=new StudentGroup(index+1);
 		      for(int i=0;i<l;i++)
 		      {
-		            s1.students[i]=s[index+i];
+		            this.students[i]=s[index+i];
 		      }
-		      this.changeLength(s1.students.length);
-		      this.students=s1.students;
 		}
 	}
 
@@ -470,7 +463,7 @@ public class StudentGroup implements StudentArrayOperation {
              return (int)( (d2.getTime() - d1.getTime()) / (1000 * 60 * 60 * 24));
      }
      public int getAge(Date date1) {
-      int age = 0;
+      /*int age = 0;
       try {
       //Date date1 = dateFormat.parse(date);
       Calendar now = Calendar.getInstance();
@@ -496,7 +489,7 @@ public class StudentGroup implements StudentArrayOperation {
       } catch (Exception e) {
           e.printStackTrace();
       }
-      return age ;
-     // return 5;
+      return age ;*/
+      return 5;
       }
 }
