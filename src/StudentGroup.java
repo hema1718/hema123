@@ -88,18 +88,6 @@ public class StudentGroup implements StudentArrayOperation {
 		      //System.out.println(this.students.length);
 		      //tudentGroup(this.students.length);
 		      this.students=s1.students;
-		      //System.out.println(this.students[5].getId());
-		      /*Student s[]=new;
-		      int k=0;
-		      s[k]=student;
-		      k++;
-		      for(int i=1;i<students.length;i++)
-		      {
-		      	s[k]=students[i];
-		      	k++;
-		      }
-		    	StudentGroup g=new StudentGroup(k);
-		    	this.students=s;*/
 	      }
 	}
 
