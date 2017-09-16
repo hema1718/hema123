@@ -262,13 +262,45 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getNearBirthDate(Date date, int days) {
 		// Add your implementation here
+		if(date.equals(null))
+		      throw new IllegalArgumentException();
+		else{
+		      Student l[]=new Student[this.students.length];
+		      int j=0;
+		      for(int i=0;i<this.students.length;i++)
+		      {
+		            if(daysBetween(date,this.students[i].getBirthDate())<=days)
+		            {
+		                  l[j]=students[i];
+		                  j=j+1;
+		            }
+		      }
+		      if(j>0)
+		      {
+		            Student m[]=new Student[j];
+		            for(int i=0;i<j;i++)
+		            {
+		                  m[i]=l[i];
+		            }
+		            return m;
+		      }
+		}
 		return null;
 	}
-
+	public static int daysBetween(Date d1, Date d2){
+             return (int)( (d2.getTime() - d1.getTime()) / (1000 * 60 * 60 * 24));
+     }
 	@Override
 	public int getCurrentAgeByDate(int indexOfStudent) {
 		// Add your implementation here
-		return 0;
+		if(indexOfStudent<0 || indexOfStudent>=this.students.length)
+		      throw new IllegalArgumentException();
+		else
+		{
+		      Student s=this.students[indexOfStudent];
+		      return getAge(s.getBirthDate());
+		}
+		//return 0;
 	}
 
 	@Override
@@ -280,26 +312,7 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getStudentsWithMaxAvgMark() {
 		// Add your implementation here
-		Student l[]=new Student[this.students.length];
-		int j=0;
-		for(int i=0;i<this.students.length;i++)
-		{
-		      if(getCurrentAgeByDate(i)==age)
-		      {
-		             l[j]=students[i];
-		             j=j+1;
-		      }
-		 }
-		 if(j>0)
-		  {
-		            Student m[]=new Student[j];
-		            for(int i=0;i<j;i++)
-		            {
-		                  m[i]=l[i];
-		            }
-		            return m;
-		   }
-		return null;
+		
 	}
 
 	@Override
