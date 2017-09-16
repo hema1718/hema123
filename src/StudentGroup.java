@@ -90,7 +90,6 @@ public class StudentGroup implements StudentArrayOperation {
 		      this.students=s1.students;
 	      }
 	}
-
 	@Override
 	public void addLast(Student student) throws IllegalArgumentException{
 		// Add your implementation here
@@ -98,13 +97,13 @@ public class StudentGroup implements StudentArrayOperation {
 		      throw new IllegalArgumentException();
 		else
 		{
-		      Student[] s;
-		      s=this.students;
+		    //  Student[] s;
+		      //s=this.students;
 		      StudentGroup s1=new StudentGroup(this.students.length+1);
 		      int i;
 		      for(i=0;i<this.students.length;i++)
 		      {
-		            s1.students[i]=s[i];
+		            s1.students[i]=this.students[i];
 		      }
 		    //  System.Array.Resize(Student students, students.length + 1);
 		      s1.students[s1.students.length-1]=student;
@@ -123,12 +122,12 @@ public class StudentGroup implements StudentArrayOperation {
 		      throw new IllegalArgumentException();
 		else
 		{
-		      Student[] s;
-		      s=this.students;
+		     // Student[] s;
+		      //s=this.students;
 		      StudentGroup s1=new StudentGroup(this.students.length+1);
 		      for(int i=0;i<index;i++)
 		      {
-		            s1.students[i]=s[i];
+		            s1.students[i]=this.students[i];
 		      }
 		      s1.students[index]=student;
 		      for(int i=index+1;i<this.students.length;i++)
@@ -148,16 +147,16 @@ public class StudentGroup implements StudentArrayOperation {
 		      throw new IllegalArgumentException();
 		else
 		{
-		      Student[] s;
-		      s=this.students;
+		      //Student[] s;
+		      //s=this.students;
 		      StudentGroup s1=new StudentGroup(this.students.length-1);
 		      for(int i=0;i<index;i++)
 		      {
-		            s1.students[i]=s[i];
+		            s1.students[i]=this.students[i];
 		      }
 		      for(int i=index;i<this.students.length;i++)
 		      {
-		            s1.students[i]=s[i+1];
+		            s1.students[i]=this.students[i+1];
 		      }
 		      this.changeLength(s1.students.length);
 		      this.students=s1.students;
