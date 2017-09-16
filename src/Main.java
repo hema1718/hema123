@@ -75,11 +75,11 @@ public class Main {
 		}
 		catch(IllegalArgumentException e)
 		{
-		      System.out.println("hi");;
+		      System.out.println(e);;
 		}
 		catch(Exception e)
 		{
-		      System.out.println("hello");;
+		      System.out.println(e);;
 		}
 	}
 
