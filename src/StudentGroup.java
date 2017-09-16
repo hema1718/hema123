@@ -470,7 +470,7 @@ public class StudentGroup implements StudentArrayOperation {
              return (int)( (d2.getTime() - d1.getTime()) / (1000 * 60 * 60 * 24));
      }
      public int getAge(Date date1) {
-      int age = 0;
+     /* int age = 0;
       try {
       //Date date1 = dateFormat.parse(date);
       Calendar now = Calendar.getInstance();
@@ -496,7 +496,7 @@ public class StudentGroup implements StudentArrayOperation {
       } catch (Exception e) {
           e.printStackTrace();
       }
-      return age ;
-     // return 5;
+      return age ;*/
+     return 5;
       }
 }
